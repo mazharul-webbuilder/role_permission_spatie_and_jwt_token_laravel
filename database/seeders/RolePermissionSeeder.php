@@ -26,5 +26,31 @@ class RolePermissionSeeder extends Seeder
 
         $admin_user->assignRole($role);
         $role->syncPermissions($permissions);
+
+        //------------------------------------------------------------------------
+        /**
+        * Another way to seed user and role and permission together
+        * you can make you seeder file name as AdminUserAndRolePermissionSeeder
+        */
+        //------------------------------------------------------------------------
+        /*
+         // Admin Seeder
+        $user = Admin::create([
+            'name' => 'Super Admin',
+            'email' => 'admin@gmail.com',
+            'password' => bcrypt('123456')
+        ]);
+        // Create Role
+        $role = Role::create(['name' => 'Super Admin', 'guard_name' => 'admin']);
+        // Create Permissions
+        $permissions = Permission::where('guard_name', 'admin')->pluck('id', 'id')->all();
+        // set multiple permissions to this role
+        $role->syncPermissions($permissions);
+        // Finnaly assign the role to a user
+        $user->assignRole([$role->id]);
+        */
+
+
+        
     }
 }

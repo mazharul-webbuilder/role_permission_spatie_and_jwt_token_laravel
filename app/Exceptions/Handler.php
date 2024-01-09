@@ -23,6 +23,26 @@ class Handler extends ExceptionHandler
      */
     public function register(): void
     {
+         // Customize API Exception response
+        $this->renderable(function (\Spatie\Permission\Exceptions\UnauthorizedException $e, $request) {
+            return response()->json([
+                                    'status' => false,
+                                    'error' => true,
+                                    'message' => $e->getMessage()
+            ]);
+        });
+
+        // Customize ValidationException response for API and Custom Request Class validation errors
+        // use Illuminate\Validation\ValidationException;
+        $this->renderable(function (ValidationException $exception){
+            return response()->json([
+                                    'status' => false,
+                                    'error' => true,
+                                    'message' => $e->getMessage()
+            ]);
+        });
+
+        
         $this->reportable(function (Throwable $e) {
             //
         });

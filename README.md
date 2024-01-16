@@ -25,7 +25,7 @@
     <li>run this php artisan jwt:secret</li>
     <li>use this on User or Admin model "use Tymon\JWTAuth\Contracts\JWTSubject;" also implement this "implements JWTSubject"</li>
     <li>Add below code to Admin Model or User Model</li>
-    
+
     /**
      * Get the identifier that will be stored in the subject claim of the JWT.
      *

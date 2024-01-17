@@ -83,5 +83,12 @@
     <li><a href="https://jwt-auth.readthedocs.io/en/docs/quick-start/">Demo Controller Code link</a></li>
     <li>Make API request through Postman</li>
 </ul>
+<hr>
+<h3>That Topic that cover on this Repository</h3>
+<ul>
+    <li>Redis Implementation process, check controller and redis.md file</li>
+    <li>Check Helper.php to get advance query techniques with unlimited number of columns.</li>
+
+</ul>
 
 

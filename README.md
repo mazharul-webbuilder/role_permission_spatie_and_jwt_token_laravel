@@ -1,3 +1,4 @@
+<h1>REDIS Cache Tutorial: <a href="https://github.com/mazharul-webbuilder/role_permission_spatie_and_jwt_token_laravel/blob/master/Redis.md">Link</a></h1>
 <h1>Role & Permission Using Spatie Package also JWT api token generated package.</h1>
 <hr>
 <h3>Spatie Role Permission Working Process:</h3>
